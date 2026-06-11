@@ -43,7 +43,7 @@ export function AppointmentForm() {
 
     const validationErrors = validateAppointmentForm(formData);
     if (Object.keys(validationErrors).length > 0) {
-      setErrors(validationErrors);
+      setErrors(validationErrors as Record<string, string>);
       return;
     }
 

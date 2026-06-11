@@ -3,36 +3,38 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { fadeUp, fadeLeft, fadeRight } from "@/lib/motion";
-
-const whatsappNumber =
-  process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "917619621584";
+import { getWhatsAppUrl } from "@/components/WhatsAppButton";
+import { fadeInUp, fadeInRight, fadeInLeft } from "@/lib/animations";
 
 export function HeroSection() {
+  const whatsappUrl = getWhatsAppUrl();
+
   return (
     <section className="relative min-h-screen overflow-hidden bg-background pt-24 md:pt-28">
       <div className="mx-auto grid max-w-7xl items-center gap-8 px-5 pb-16 pt-8 md:grid-cols-2 md:px-8 md:pt-16 lg:pb-24">
         <div className="relative z-10">
           <motion.span
             className="mb-4 inline-block rounded-full bg-primary/60 px-4 py-1.5 text-xs font-medium text-text/70"
-            variants={fadeRight}
+            variants={fadeInLeft}
             initial="hidden"
             animate="visible"
           >
             Premium Beauty Clinic in Raichur
           </motion.span>
+
           <motion.h1
             className="font-heading text-4xl font-bold leading-tight text-text md:text-5xl lg:text-6xl"
-            variants={fadeUp}
+            variants={fadeInUp}
             initial="hidden"
             animate="visible"
           >
             Where Your{" "}
             <span className="text-gold">Natural Beauty</span> Shines
           </motion.h1>
+
           <motion.p
             className="mt-4 max-w-lg text-sm leading-relaxed text-text/60 md:text-base"
-            variants={fadeUp}
+            variants={fadeInUp}
             initial="hidden"
             animate="visible"
           >
@@ -40,9 +42,10 @@ export function HeroSection() {
             grooming at Archi&apos;s Beauty Care. Personalized care for every
             woman.
           </motion.p>
+
           <motion.div
             className="mt-8 flex flex-wrap gap-4"
-            variants={fadeLeft}
+            variants={fadeInRight}
             initial="hidden"
             animate="visible"
           >
@@ -52,8 +55,9 @@ export function HeroSection() {
             >
               Book Appointment
             </Link>
+
             <a
-              href={`https://wa.me/${whatsappNumber}`}
+              href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-lg border border-gold/40 px-8 py-3 text-sm font-semibold text-gold transition-all duration-200 hover:bg-gold/10"
@@ -62,9 +66,10 @@ export function HeroSection() {
             </a>
           </motion.div>
         </div>
+
         <motion.div
           className="relative aspect-[4/5] md:aspect-square"
-          variants={fadeUp}
+          variants={fadeInUp}
           initial="hidden"
           animate="visible"
         >

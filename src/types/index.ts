@@ -5,6 +5,7 @@ export interface ServiceItem {
   benefits: string[];
   image: string;
   category: ServiceCategory;
+  whatsappMessage: string;
 }
 
 export type ServiceCategory = "skin" | "beauty" | "training";

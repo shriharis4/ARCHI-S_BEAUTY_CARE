@@ -3,7 +3,6 @@
 import { testimonials } from "@/constants/testimonials";
 import { TestimonialCard } from "@/components/TestimonialCard";
 import { SectionHeading } from "@/components/SectionHeading";
-import { staggerContainer } from "@/lib/motion";
 
 export function TestimonialsSection() {
   return (

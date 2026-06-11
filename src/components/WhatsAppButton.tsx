@@ -2,13 +2,17 @@
 
 import { motion } from "framer-motion";
 
-const whatsappNumber =
-  process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "917619621584";
+const DEFAULT_MESSAGE =
+  "Hi! I'm interested in your beauty services. Can you please help me book an appointment?";
 
 export function WhatsAppButton() {
+  const phoneNumber = "917619621584";
+  const encodedMessage = encodeURIComponent(DEFAULT_MESSAGE);
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
   return (
     <motion.a
-      href={`https://wa.me/${whatsappNumber}`}
+      href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-gold text-white shadow-lg transition-shadow hover:shadow-xl md:h-16 md:w-16"
@@ -28,4 +32,12 @@ export function WhatsAppButton() {
       </svg>
     </motion.a>
   );
+}
+
+export function getWhatsAppUrl(serviceName?: string): string {
+  const phoneNumber = "917619621584";
+  const message = serviceName
+    ? `Hi! I'm interested in the *${serviceName}* service at Archi's Beauty Care. Can you please help me book an appointment?`
+    : DEFAULT_MESSAGE;
+  return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 }

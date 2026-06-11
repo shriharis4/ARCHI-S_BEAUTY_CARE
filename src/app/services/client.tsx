@@ -2,12 +2,12 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { services, serviceCategories } from "@/constants/services";
+import { services, serviceCategories } from "@/data/services";
 import { ServiceCard } from "@/components/ServiceCard";
-import { SectionHeading } from "@/components/SectionHeading";
+import { SectionHeader } from "@/components/SectionHeader";
 import { FinalCTASection } from "@/sections/FinalCTASection";
-import { cn } from "@/utils/cn";
-import { fadeUp, staggerContainer, getMotionProps } from "@/lib/motion";
+import { cn } from "@/lib/utils";
+import { scrollFadeIn, fadeInUp, staggerContainer } from "@/lib/animations";
 
 export function ServicesPageClient() {
   const [activeCategory, setActiveCategory] = useState<string>("all");
@@ -19,15 +19,16 @@ export function ServicesPageClient() {
 
   return (
     <>
-      <section className="bg-background pt-28 pb-12 md:pt-36 md:pb-20">
+      <section className="bg-background pb-12 pt-28 md:pb-20 md:pt-36">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
-          <SectionHeading
+          <SectionHeader
             title="Our Premium Services"
             subtitle="Discover our range of professional beauty treatments and training programs designed for you."
           />
+
           <motion.div
             className="mb-12 flex flex-wrap justify-center gap-2"
-            {...getMotionProps(fadeUp)}
+            {...scrollFadeIn(fadeInUp)}
           >
             <button
               onClick={() => setActiveCategory("all")}
@@ -40,6 +41,7 @@ export function ServicesPageClient() {
             >
               All Services
             </button>
+
             {serviceCategories.map((cat) => (
               <button
                 key={cat.id}
@@ -55,20 +57,22 @@ export function ServicesPageClient() {
               </button>
             ))}
           </motion.div>
+
           <motion.div
+            key={activeCategory}
             className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            key={activeCategory}
           >
-            {filtered.map((service, i) => (
-              <ServiceCard key={service.id} service={service} index={i} />
+            {filtered.map((service, index) => (
+              <ServiceCard key={service.id} service={service} index={index} />
             ))}
           </motion.div>
         </div>
       </section>
+
       <FinalCTASection />
     </>
   );
