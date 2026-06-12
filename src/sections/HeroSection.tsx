@@ -28,7 +28,7 @@ export function HeroSection() {
             initial="hidden"
             animate="visible"
           >
-            Where Your{" "}
+            Where Your {" "}
             <span className="text-gold">Natural Beauty</span> Shines
           </motion.h1>
 

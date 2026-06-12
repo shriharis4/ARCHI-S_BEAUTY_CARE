@@ -40,7 +40,8 @@ export function TransformationGallerySection() {
           subtitle="Real results from our premium beauty treatments"
         />
 
-        <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+        <div
+            className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
           {transformationVideos.map((video) => (
             <motion.div
               key={video.id}
@@ -50,15 +51,15 @@ export function TransformationGallerySection() {
             >
               <div className="relative w-full overflow-hidden rounded-t-2xl">
                 <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/20 transition-all duration-300 group-hover:bg-black/40">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white/90 shadow-lg transition-transform duration-300 group-hover:scale-110">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="ml-1 h-7 w-7 text-text">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
+<div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/90 shadow-lg transition-transform duration-300 group-hover:scale-110">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="ml-0.5 h-6 w-6 text-text">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                </div>
+<div className="absolute left-1.5 top-1.5 z-20 rounded bg-black/60 px-1.5 py-0.5 text-[9px] font-medium uppercase tracking-wide text-white/90">
+                    Watch
                   </div>
-                </div>
-                <div className="absolute left-2 top-2 z-20 rounded bg-black/60 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide text-white/90">
-                  Watch
-                </div>
                 <video
                   src={assetPath(video.src)}
                   preload="metadata"
@@ -67,18 +68,18 @@ export function TransformationGallerySection() {
                   className="aspect-[3/4] sm:aspect-[9/16] w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
-              <div className="flex flex-col gap-0.5 rounded-b-2xl bg-white px-4 py-3">
-                <p className="text-sm font-semibold text-text">{video.title}</p>
-                <p className="text-xs text-text/50">{video.subtitle}</p>
-              </div>
+<div className="flex flex-col gap-0.5 rounded-b-2xl bg-white px-3 py-2.5">
+                    <p className="text-xs font-semibold text-text line-clamp-1">{video.title}</p>
+                    <p className="text-[10px] text-text/50 line-clamp-1">{video.subtitle}</p>
+                  </div>
             </motion.div>
           ))}
         </div>
 
-        <motion.div className="mt-12 text-center" {...getMotionProps(fadeUp)}>
+        <motion.div className="mt-10 text-center" {...getMotionProps(fadeUp)}>
           <Link
             href="/gallery"
-            className="inline-block rounded-lg bg-gold px-8 py-3 text-sm font-semibold text-white transition-all duration-200 hover:bg-gold/90 hover:shadow-lg"
+            className="inline-block rounded-lg bg-gold px-6 py-2.5 text-sm font-semibold text-white transition-all duration-200 hover:bg-gold/90 hover:shadow-lg"
           >
             View Full Gallery
           </Link>

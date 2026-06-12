@@ -14,7 +14,7 @@ export function AboutClinicSection() {
             className="relative aspect-square w-full overflow-hidden rounded-3xl md:aspect-[4/5] bg-primary/20"
             {...getMotionProps(fadeUp)}
           >
-            <div className="absolute inset-0 z-10 flex items-center justify-center">
+            <div className="absolute inset-0 flex items-center justify-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"

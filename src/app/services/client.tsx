@@ -60,7 +60,7 @@ export function ServicesPageClient() {
 
           <motion.div
             key={activeCategory}
-            className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+            className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"

@@ -9,17 +9,17 @@ export function FinalCTASection() {
   const whatsappUrl = getWhatsAppUrl();
 
   return (
-    <section className="bg-gradient-to-br from-primary/30 to-gold/10 py-20 md:py-28">
+    <section className="bg-gradient-to-br from-primary/30 to-gold/10 py-16 md:py-24">
       <div className="mx-auto max-w-3xl px-5 text-center md:px-8">
         <motion.h2
-          className="font-heading text-3xl font-bold text-text md:text-4xl lg:text-5xl"
+          className="font-heading text-2xl font-bold text-text md:text-3xl lg:text-4xl"
           {...scrollFadeIn(fadeInUp)}
         >
           Ready to Begin Your Beauty Journey?
         </motion.h2>
 
         <motion.p
-          className="mx-auto mt-4 max-w-lg text-sm leading-relaxed text-text/60 md:text-base"
+          className="mx-auto mt-3 max-w-lg text-sm leading-relaxed text-text/60 md:text-base"
           {...scrollFadeIn(fadeInUp)}
         >
           Book your consultation today and experience premium beauty care
@@ -27,12 +27,12 @@ export function FinalCTASection() {
         </motion.p>
 
         <motion.div
-          className="mt-8 flex flex-wrap justify-center gap-4"
+          className="mt-6 flex flex-wrap justify-center gap-3"
           {...scrollFadeIn(fadeInUp)}
         >
           <Link
             href="/contact"
-            className="rounded-lg bg-gold px-8 py-3 text-sm font-semibold text-white transition-all duration-200 hover:bg-gold/90 hover:shadow-lg"
+            className="rounded-lg bg-gold px-6 py-2.5 text-sm font-semibold text-white transition-all duration-200 hover:bg-gold/90 hover:shadow-lg"
           >
             Book Appointment
           </Link>
@@ -41,7 +41,7 @@ export function FinalCTASection() {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-lg border border-gold/40 px-8 py-3 text-sm font-semibold text-gold transition-all duration-200 hover:bg-gold/10"
+            className="rounded-lg border border-gold/40 px-6 py-2.5 text-sm font-semibold text-gold transition-all duration-200 hover:bg-gold/10"
           >
             Chat on WhatsApp
           </a>

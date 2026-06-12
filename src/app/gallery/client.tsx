@@ -55,21 +55,18 @@ export function GalleryPageClient() {
           />
 
           <motion.div
-            className="relative mb-16 h-64 w-full overflow-hidden rounded-2xl shadow-lg md:h-96 lg:h-[480px]"
+            className="relative mb-16 h-64 w-full overflow-hidden rounded-2xl shadow-lg md:h-96 lg:h-[480px] bg-primary/20"
             {...getMotionProps(fadeUp)}
           >
-            <img
-              src={assetPath("/gallery/Premium_beauty_care_with_archis.jpg")}
-              alt="Premium Beauty Care with Archies"
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-            <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/30 px-4 text-center">
-              <h2 className="font-heading text-3xl font-bold text-white drop-shadow md:text-4xl lg:text-5xl">
-                Premium Beauty Care
-              </h2>
-              <p className="mt-2 max-w-lg text-sm text-white/90 md:text-base">
-                Experience the finest beauty treatments at Archies Beauty Care
-              </p>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="h-20 w-20 text-gold/50"
+              >
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
+              </svg>
             </div>
           </motion.div>
         </div>
@@ -89,7 +86,7 @@ export function GalleryPageClient() {
               </motion.div>
 
               <div
-                className={`grid gap-5 ${
+                className={`grid gap-4 ${
                   section.videos.length === 1
                     ? "max-w-sm mx-auto"
                     : section.videos.length === 2
@@ -108,13 +105,13 @@ export function GalleryPageClient() {
                   >
                     <div className="relative w-full overflow-hidden rounded-t-2xl">
                       <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/20 transition-all duration-300 group-hover:bg-black/40">
-                        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white/90 shadow-lg transition-transform duration-300 group-hover:scale-110">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="ml-1 h-7 w-7 text-text">
+                        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/90 shadow-lg transition-transform duration-300 group-hover:scale-110">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="ml-0.5 h-6 w-6 text-text">
                             <path d="M8 5v14l11-7z" />
                           </svg>
                         </div>
                       </div>
-                      <div className="absolute left-2 top-2 z-20 rounded bg-black/60 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide text-white/90">
+                      <div className="absolute left-1.5 top-1.5 z-20 rounded bg-black/60 px-1.5 py-0.5 text-[9px] font-medium uppercase tracking-wide text-white/90">
                         Watch Video
                       </div>
                       <video
@@ -125,8 +122,8 @@ export function GalleryPageClient() {
                         className="aspect-[3/4] sm:aspect-[9/16] w-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                     </div>
-                    <div className="rounded-b-2xl bg-white px-4 py-3">
-                      <p className="text-sm font-semibold text-text">{video.label}</p>
+                    <div className="rounded-b-2xl bg-white px-3 py-2.5">
+                      <p className="text-xs font-semibold text-text line-clamp-1">{video.label}</p>
                     </div>
                   </motion.div>
                 ))}
