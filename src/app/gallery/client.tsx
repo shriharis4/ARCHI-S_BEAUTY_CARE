@@ -1,12 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/SectionHeading";
 import { VideoModal } from "@/components/VideoModal";
 import { fadeUp, getMotionProps } from "@/lib/motion";
+import { assetPath } from "@/lib/utils";
 
 const galleryVideoSections = [
   {
@@ -58,13 +58,10 @@ export function GalleryPageClient() {
             className="relative mb-16 h-64 w-full overflow-hidden rounded-2xl shadow-lg md:h-96 lg:h-[480px]"
             {...getMotionProps(fadeUp)}
           >
-            <Image
-              src="/gallery/Premium_beauty_care_with_archis.jpg"
+            <img
+              src={assetPath("/gallery/Premium_beauty_care_with_archis.jpg")}
               alt="Premium Beauty Care with Archies"
-              fill
-              className="object-cover"
-              priority
-              sizes="100vw"
+              className="absolute inset-0 h-full w-full object-cover"
             />
             <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/30 px-4 text-center">
               <h2 className="font-heading text-3xl font-bold text-white drop-shadow md:text-4xl lg:text-5xl">
@@ -110,25 +107,23 @@ export function GalleryPageClient() {
                     onClick={() => setActiveVideo({ src: video.src, label: video.label })}
                   >
                     <div className="relative w-full overflow-hidden rounded-t-2xl">
-                      <video
-                        src={video.src}
-                        className="aspect-[9/16] w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                        autoPlay
-                        muted
-                        loop
-                        playsInline
-                        preload="metadata"
-                      />
-                      <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition-all duration-300 group-hover:bg-black/30">
-                        <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white/90 opacity-0 shadow-lg transition-all duration-300 group-hover:opacity-100">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="ml-0.5 h-6 w-6 text-text">
+                      <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/20 transition-all duration-300 group-hover:bg-black/40">
+                        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white/90 shadow-lg transition-transform duration-300 group-hover:scale-110">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="ml-1 h-7 w-7 text-text">
                             <path d="M8 5v14l11-7z" />
                           </svg>
                         </div>
                       </div>
-                      <div className="absolute left-2 top-2 rounded bg-black/60 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide text-white/90 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                        Watch
+                      <div className="absolute left-2 top-2 z-20 rounded bg-black/60 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide text-white/90">
+                        Watch Video
                       </div>
+                      <video
+                        src={assetPath(video.src)}
+                        preload="metadata"
+                        muted
+                        playsInline
+                        className="aspect-[3/4] sm:aspect-[9/16] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
                     </div>
                     <div className="rounded-b-2xl bg-white px-4 py-3">
                       <p className="text-sm font-semibold text-text">{video.label}</p>

@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { getWhatsAppUrl } from "@/components/WhatsAppButton";
 import { fadeInUp, fadeInRight, fadeInLeft } from "@/lib/animations";
+import { assetPath } from "@/lib/utils";
 
 export function HeroSection() {
   const whatsappUrl = getWhatsAppUrl();
@@ -74,13 +74,10 @@ export function HeroSection() {
           animate="visible"
         >
           <div className="absolute inset-0 z-10 rounded-3xl bg-gradient-to-br from-primary/40 to-gold/10" />
-          <Image
-            src="Premium_beauty_care_with_archis.jpg"
+          <img
+            src={assetPath("/gallery/Premium_beauty_care_with_archis.jpg")}
             alt="Premium beauty treatment at Archies Beauty Care"
-            fill
-            className="rounded-3xl object-cover"
-            priority
-            sizes="(max-width: 768px) 100vw, 50vw"
+            className="absolute inset-0 h-full w-full rounded-3xl object-cover"
           />
         </motion.div>
       </div>

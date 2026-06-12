@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -12,17 +11,19 @@ export function AboutClinicSection() {
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <div className="grid items-center gap-12 md:grid-cols-2 md:gap-16">
           <motion.div
-            className="relative aspect-square w-full overflow-hidden rounded-3xl md:aspect-[4/5]"
+            className="relative aspect-square w-full overflow-hidden rounded-3xl md:aspect-[4/5] bg-primary/20"
             {...getMotionProps(fadeUp)}
           >
-            <div className="absolute inset-0 z-10 rounded-3xl bg-gradient-to-br from-primary/30 to-gold/10" />
-            <Image
-              src="Premium_beauty_care_with_archis.jpg"
-              alt="About Archies Beauty Care clinic"
-              fill
-              className="rounded-3xl object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
+            <div className="absolute inset-0 z-10 flex items-center justify-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="h-16 w-16 text-gold/50"
+              >
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
+              </svg>
+            </div>
           </motion.div>
           <div>
             <SectionHeading

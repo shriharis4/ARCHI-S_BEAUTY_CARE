@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { businessInfo } from "@/constants/business";
@@ -18,17 +17,19 @@ export function AboutPageClient() {
           />
           <div className="grid items-center gap-12 md:grid-cols-2 md:gap-16">
             <motion.div
-              className="relative aspect-[4/5]"
+              className="relative aspect-[4/5] bg-primary/20 rounded-3xl"
               {...getMotionProps(fadeUp)}
             >
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/30 to-gold/10" />
-              <Image
-                src="/images/placeholder.svg"
-                alt="Archies Beauty Care clinic interior"
-                fill
-                className="rounded-3xl object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="h-16 w-16 text-gold/50"
+                >
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
+                </svg>
+              </div>
             </motion.div>
             <div className="space-y-6">
               <motion.div {...getMotionProps(fadeUp)}>

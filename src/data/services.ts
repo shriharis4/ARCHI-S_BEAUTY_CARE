@@ -26,7 +26,7 @@ export const services: Service[] = [
       "Instant glow",
       "Suitable for all skin types",
     ],
-    image: "Hydra_facial.jpg",
+    image: "/services/Hydra_facial.jpg",
     category: "skin",
     whatsappMessage:
       "Hi! I'm interested in booking a *Hydra Facial* at Archies Beauty Care. Could you let me know the availability and pricing?",
@@ -42,7 +42,7 @@ export const services: Service[] = [
       "Luminous complexion",
       "Smooth texture",
     ],
-    image: "Korean_glass_skin.jpg",
+    image: "/services/Korean_glass_skin.jpg",
     category: "skin",
     whatsappMessage:
       "Hi! I'm interested in the *Korean Glass Skin Treatment* at Archies Beauty Care. Can you share details about the procedure and pricing?",
@@ -58,7 +58,7 @@ export const services: Service[] = [
       "Brighter skin",
       "Improved texture",
     ],
-    image: "Chemical_Peels.png",
+    image: "/services/Chemical_Peels.png",
     category: "skin",
     whatsappMessage:
       "Hi! I'd like to know more about *Chemical Peels* at Archies Beauty Care. Can I book a consultation?",
@@ -74,7 +74,7 @@ export const services: Service[] = [
       "Even skin tone",
       "Youthful glow",
     ],
-    image: "Skin_Brightening.png",
+    image: "/services/Skin_Brightening.png",
     category: "skin",
     whatsappMessage:
       "Hi! I'm interested in the *Skin Brightening* treatment at Archies Beauty Care. Please share more details!",
@@ -90,7 +90,7 @@ export const services: Service[] = [
       "Gentle on skin",
       "Customized approach",
     ],
-    image: "Melasma_Treatment.jpg",
+    image: "/services/Melasma_Treatment.jpg",
     category: "skin",
     whatsappMessage:
       "Hi! I'm struggling with melasma and would like to know about your *Melasma Treatment* at Archies Beauty Care. Can I book a consultation?",
@@ -106,7 +106,7 @@ export const services: Service[] = [
       "Balanced oil production",
       "Cleaner complexion",
     ],
-    image: "Open_Pore_Treatment.png",
+    image: "/services/Open_Pore_Treatment.png",
     category: "skin",
     whatsappMessage:
       "Hi! I'm interested in the *Open Pore Treatment* at Archies Beauty Care. Can you help me with more information?",
@@ -122,7 +122,7 @@ export const services: Service[] = [
       "Time-saving",
       "Customized shape",
     ],
-    image: "Permanent_Eyebrows.jpg",
+    image: "/services/Permanent_Eyebrows.jpg",
     category: "beauty",
     whatsappMessage:
       "Hi! I'm interested in *Permanent Eyebrows* at Archies Beauty Care. I'd love to know more about the process and pricing!",
@@ -138,7 +138,7 @@ export const services: Service[] = [
       "Long-lasting",
       "Saves makeup time",
     ],
-    image: "Permanent_Lip_Colour.jpg",
+    image: "/services/Permanent_Lip_Colour.jpg",
     category: "beauty",
     whatsappMessage:
       "Hi! I'm interested in *Permanent Lip Colour* at Archies Beauty Care. Can you share details about the procedure?",
@@ -154,8 +154,7 @@ export const services: Service[] = [
       "Expert guidance",
       "Skin analysis",
     ],
-    // TODO: Replace with actual image when provided
-    image: "placeholder.svg",
+    image: "/images/placeholder.svg",
     category: "beauty",
     whatsappMessage:
       "Hi! I'd like to book a *Beauty Consultation* at Archies Beauty Care. When is Archana available?",
@@ -171,7 +170,7 @@ export const services: Service[] = [
       "Professional tips",
       "Hands-on learning",
     ],
-    image: "Self_Grooming_Sessions.png",
+    image: "/services/Self_Grooming_Sessions.png",
     category: "training",
     whatsappMessage:
       "Hi! I'm interested in the *Self Grooming Sessions* at Archies Beauty Care. Could you share the schedule and fees?",
@@ -187,8 +186,7 @@ export const services: Service[] = [
       "Career guidance",
       "Hands-on practice",
     ],
-    // TODO: Replace with actual image when provided
-    image: "placeholder.svg",
+    image: "/images/placeholder.svg",
     category: "training",
     whatsappMessage:
       "Hi! I want to enroll in the *Beauty Academy Program* at Archies Beauty Care. Please tell me more about the courses and fees!",
@@ -204,8 +202,7 @@ export const services: Service[] = [
       "Personal growth",
       "Positive mindset",
     ],
-    // TODO: Replace with actual image when provided
-    image: "placeholder.svg",
+    image: "/images/placeholder.svg",
     category: "training",
     whatsappMessage:
       "Hi! I'm interested in the *Confidence Development* sessions at Archies Beauty Care. Can I know more about what it includes?",
