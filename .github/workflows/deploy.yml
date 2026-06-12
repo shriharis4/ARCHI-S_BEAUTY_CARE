@@ -25,6 +25,10 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+        env:
+          NEXT_PUBLIC_APPOINTMENT_API_URL: https://script.google.com/macros/s/AKfycbwQ1PjrDkEsjw2XfM48blaoG4NX9w2Yt9nelb5Ke8eDKtOb4fBY9otb7Ur_kbCGvZSg/exec
+          NEXT_PUBLIC_WHATSAPP_NUMBER: 917619621584
+          NEXT_PUBLIC_PHONE_NUMBER: 919731490728
       - run: touch out/.nojekyll
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
