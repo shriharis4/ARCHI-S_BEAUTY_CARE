@@ -11,7 +11,7 @@ export function Footer() {
               Archies <span className="text-gold">Beauty Clinic</span>
             </h3>
             <p className="mt-3 text-sm leading-relaxed text-white/70">
-              Premium beauty clinic and academy in Raichur, offering advanced
+              Premium beauty clinic and restuarnt and academy in Raichur, offering advanced
               skin treatments, beauty services, and professional training.
             </p>
           </div>
